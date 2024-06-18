@@ -1,0 +1,20 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 95 
+
+
+model: nbeats.yaml 
+
+data: 
+  __base__: source_energy.yaml
+  init_args:
+    batch_size: 512
+    lambda_time: 10000 # good default, but could be improved
+    lambda_freq: 50 # good default, but could be improved
+    lookback: 101
+    prediction_horizon: 34
+    confounder_freq_len: 5
+    confounder_freq_strength: 5000 
+
+optimizer:
+  lr: 5e-3

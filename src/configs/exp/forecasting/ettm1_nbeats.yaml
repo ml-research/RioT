@@ -1,0 +1,20 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 150 
+
+
+model: nbeats.yaml 
+
+data: 
+  __base__: source_ettm1.yaml
+  init_args:
+    batch_size: 512 
+    lambda_time:  50
+    lambda_freq: 50000 # 10000 
+    lookback: 101
+    prediction_horizon: 34
+    confounder_freq_len: 6
+    confounder_freq_strength: 500
+
+optimizer:
+  lr: 5e-3

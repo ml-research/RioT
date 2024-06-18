@@ -1,0 +1,5 @@
+__base__: source.yaml
+init_args:
+  darts_loader: 
+    class_path: darts.datasets.WeatherDataset
+  target_feature_names: p (mbar) 

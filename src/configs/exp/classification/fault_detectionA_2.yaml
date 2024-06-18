@@ -1,0 +1,15 @@
+seed_everything: 34235
+trainer:
+  max_epochs: 50
+
+model: fcn.yaml 
+
+data:
+  __base__: fault_detectionA.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 1000000 # 100000
+    lambda_freq: 10000
+
+optimizer:
+  lr: 0.00051680110607108

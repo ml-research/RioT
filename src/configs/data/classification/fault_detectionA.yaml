@@ -1,0 +1,9 @@
+__base__: ucr.yaml
+init_args:
+  batch_size: 32
+  confounder_len: 15
+  confounder_ampl: 0.02
+  lambda_time: 100.0
+  lambda_freq: 30.0
+  num_classes: 3
+  name: FaultDetectionA

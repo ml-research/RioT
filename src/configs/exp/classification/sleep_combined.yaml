@@ -1,0 +1,18 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 30
+  limit_train_batches: 0.1
+
+model: simple_conv.yaml # relative to exp/classication/test.yaml
+
+data:
+  __base__: sleep.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 1000000.0
+    lambda_freq: 10000.0
+
+optimizer:
+  class_path: torch.optim.Adam
+  init_args:
+    lr: 0.000775822689758383

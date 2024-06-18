@@ -1,0 +1,23 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 95 
+  # max_epochs: 60 
+
+
+model: tide.yaml 
+
+data: 
+  __base__: source_energy.yaml
+  init_args:
+    batch_size: 512
+    lambda_freq: 1000 # good default, but could be improved
+    lambda_time: 400.0 # good default, but could be improved
+    lookback: 101
+    prediction_horizon: 34 
+    confounder_freq_len: 1
+    confounder_freq_strength: 15200 # yes, this is high, but the data it self has also very high variance
+
+optimizer:
+  class_path: torch.optim.Adam
+  init_args:
+    lr: 1e-3

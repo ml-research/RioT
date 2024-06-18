@@ -1,0 +1,19 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 95 
+
+
+model: tide.yaml 
+
+data: 
+  __base__: source_energy.yaml
+  init_args:
+    batch_size: 512
+    lambda_freq: 512 # good default, but could be improved
+    lookback: 101
+    prediction_horizon: 34 
+    confounder_freq_len: 1
+    confounder_freq_strength: 500000 # yes, this is high, but the data it self has also very high variance
+
+optimizer:
+  lr: 1e-3

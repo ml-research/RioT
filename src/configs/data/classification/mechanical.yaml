@@ -1,0 +1,15 @@
+class_path: lib.data.MechanicalClassificationData
+init_args:
+  batch_size: 64
+  scaler:
+    class_path: lib.preprocessing.MinMaxScaler
+    init_args:
+      feature_range:
+      - 0
+      - 1
+      copy: true
+      clip: false
+      total_mode: true
+  stage_type: duebel_tiefziehen_ow
+  
+  

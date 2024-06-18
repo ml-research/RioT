@@ -1,0 +1,15 @@
+seed_everything: 34238
+trainer:
+  max_epochs: 80
+
+model: fcn.yaml # relative to exp/classication/test.yaml
+
+data:
+  __base__: fordB.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 100000
+    lambda_freq: 1000
+
+optimizer:
+  lr: 0.00045808930340295723

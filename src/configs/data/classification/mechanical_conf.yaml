@@ -1,0 +1,5 @@
+__base__: mechanical.yaml
+init_args:
+  train_experiment_idxs: [1, 2, 3, 22, 23, 24]
+  test_experiment_idxs: [4, 5, 6, 19, 20, 21]
+  

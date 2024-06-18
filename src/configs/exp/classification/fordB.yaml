@@ -1,0 +1,20 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 80
+
+model: fcn.yaml # relative to exp/classication/test.yaml
+
+data:
+  __base__: fordB.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 99444.81391253558
+    lambda_freq: 1000
+
+optimizer:
+  lr: 0.00045808930340295723
+# classification_explanation_plot:
+#   explanation_method: INTEGRATED_GRADIENTS
+#   log_interval: 5
+#   freq_lim: 0.5
+#ckpt_path: # ../checkpoints/classification/fordB/FCN/9eb3d582e4f4444096acca1f/epoch=39-step=9999.ckpt

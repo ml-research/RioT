@@ -1,0 +1,20 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 95
+
+
+model: patchtst.yaml 
+
+data: 
+  __base__: source_weather.yaml
+  init_args:
+    batch_size: 512
+    lambda_time: 25000
+    lambda_freq: 85000
+    lookback: 101
+    prediction_horizon: 34
+    confounder_freq_len: 1
+    confounder_freq_strength: 500
+
+optimizer:
+  lr: 5e-3

@@ -1,0 +1,15 @@
+seed_everything: 34236
+trainer:
+  max_epochs: 100
+
+model: fcn.yaml 
+
+data:
+  __base__: fordA.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 100000
+    lambda_freq: 100
+
+optimizer:
+  lr: 0.0006346430788611747

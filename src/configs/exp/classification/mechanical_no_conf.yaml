@@ -1,0 +1,3 @@
+__base__: mechanical_base.yaml
+
+data: mechanical_no_conf.yaml

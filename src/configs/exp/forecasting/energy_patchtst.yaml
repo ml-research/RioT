@@ -1,0 +1,34 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 130
+
+
+model:
+  __base__: patchtst.yaml 
+  init_args:
+    patch_len: 16
+    stride: 8
+    padding_patch: end
+    d_model: 16
+    nhead: 4
+    dim_feedforward: 128
+    dropout: 0.2
+    num_encoder_layers: 3
+    
+
+
+data: 
+  __base__: source_energy.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 100000 
+    lambda_freq: 900000
+    lookback: 101
+    prediction_horizon: 34
+    confounder_freq_len: 2
+    confounder_freq_strength: 100000
+
+
+
+optimizer:
+  lr: 1e-3

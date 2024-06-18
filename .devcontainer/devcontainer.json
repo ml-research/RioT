@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+  "name": "riot",
+  "build": {
+    "dockerfile": "../.docker/Dockerfile",
+    "context": "..",
+    "args": {
+      "COMPOSE_PROJ_NAME": "riot",
+      "KIND": "3.11"
+    }
+  },
+  "remoteUser": "root", // More info: https://aka.ms/dev-containers-non-root
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "tamasfe.even-better-toml",
+        "github.copilot",
+        "genieai.chatgpt-vscode",
+        "ms-toolsai.jupyter",
+        "mikestead.dotenv",
+        "ms-python.black-formatter"
+      ]
+    }
+  },
+  "runArgs": [
+    "--gpus",
+    "device=7",
+    "--shm-size",
+    "50G"
+  ]
+}

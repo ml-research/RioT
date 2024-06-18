@@ -1,0 +1,8 @@
+lightning_logs
+__pycache__
+.aim
+proto_src
+src_old
+.cache
+old_.aim
+.executor.env

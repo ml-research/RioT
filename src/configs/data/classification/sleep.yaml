@@ -1,0 +1,9 @@
+__base__: ucr.yaml
+init_args:
+  batch_size: 64
+  confounder_len: 15
+  confounder_ampl: 0.02
+  lambda_time: 10
+  lambda_freq: 10
+  num_classes: 5
+  name: Sleep

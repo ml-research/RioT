@@ -1,0 +1,10 @@
+class_path: lib.model.forecasting.PatchTST
+init_args:
+  right_answer_loss:
+    class_path: torch.nn.MSELoss
+    init_args:
+      size_average: null
+      reduce: null
+      reduction: mean
+  right_reason_loss: null
+  patch_len: 8

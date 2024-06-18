@@ -1,0 +1,12 @@
+__base__: p2s_base.yaml
+
+model: 
+  __base__: fcn.yaml
+  init_args:
+    right_reason_loss: lib.loss.RRRIGLoss
+
+data:
+  __base__: p2s_conf.yaml
+  init_args:
+    lambda_time: 100
+    feedback_mode: LIMITED_FEEDBACK

@@ -1,0 +1,16 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 100
+  # deterministic: true
+
+model: fcn.yaml # relative to exp/classication/test.yaml
+
+data:
+  __base__: fordA.yaml
+  init_args:
+    batch_size: 64
+    lambda_time: 98900.067538237
+    lambda_freq: 100 #94548.96173888
+
+optimizer:
+  lr: 0.0006346430788611747

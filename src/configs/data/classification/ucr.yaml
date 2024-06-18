@@ -1,0 +1,22 @@
+class_path: lib.data.ClassificationData
+init_args:
+  confounder: NO_CONFOUNDER
+  batch_size: 16
+  val_confounder: NO_CONFOUNDER
+  # scaler:
+  #   class_path: lib.preprocessing.MinMaxScaler
+  #   init_args:
+  #     feature_range:
+  #     - 0
+  #     - 1
+  #     copy: true
+  #     clip: false
+  confounder_len: 15
+  confounder_ampl: 0.02
+  lambda_time: 1.0
+  lambda_freq: 1.0
+  sanity_padded_zeros: true
+  num_workers: 0
+  num_classes: 3
+  name: ArrowHead
+  train_val_split_seed: 34234

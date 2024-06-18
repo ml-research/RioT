@@ -1,0 +1,4 @@
+__base__: mechanical_base.yaml
+
+data: mechanical_conf.yaml
+

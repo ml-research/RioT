@@ -1,0 +1,22 @@
+seed_everything: 34234
+trainer:
+  max_epochs: 95 
+
+
+model: tide.yaml 
+
+data: 
+  __base__: source_weather.yaml
+  init_args:
+    batch_size: 512
+    lambda_time: 100
+    lambda_freq: 10000 
+    lookback: 101
+    prediction_horizon: 34
+    confounder_freq_len: 1
+    confounder_freq_strength: 1000
+
+
+
+optimizer:
+  lr: 1e-3

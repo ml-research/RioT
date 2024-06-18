@@ -1,0 +1,13 @@
+class_path: lib.data.ConfoundedSourceData
+init_args:
+  scaler: 
+    class_path: lib.preprocessing.StandardScaler
+  lookback: 50
+  prediction_horizon: 16 
+  confounder: FORECASTING_TIME
+  batch_size:  512
+  sanity_padded_zeros: true
+  val_confounder: NO_CONFOUNDER
+  split_ratio: 
+    - 0.7
+    - 0.4

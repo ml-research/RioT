@@ -1,0 +1,11 @@
+__base__: source.yaml
+init_args:
+  darts_loader: 
+    class_path: darts.datasets.EnergyDataset
+  target_feature_names: total load actual
+  lookback: 101
+  # prediction_horizon: 16 
+  prediction_horizon: 34 
+  confounder: FORECASTING_NOISE
+  confounder_freq_len: 3
+  confounder_freq_strength: 20000 

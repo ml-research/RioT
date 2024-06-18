@@ -1,0 +1,8 @@
+__base__: ucr.yaml
+init_args:
+  confounder_len: 15
+  confounder_ampl: 0.1
+  lambda_time: 10
+  lambda_freq: 10
+  num_classes: 2
+  name: FordB

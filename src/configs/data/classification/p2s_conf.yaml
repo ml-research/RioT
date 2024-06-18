@@ -1,0 +1,3 @@
+__base__: p2s.yaml
+init_args:
+  mode: Decoy

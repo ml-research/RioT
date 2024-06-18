@@ -1,0 +1,3 @@
+__base__: p2s_base.yaml
+
+data: p2s_no_conf.yaml

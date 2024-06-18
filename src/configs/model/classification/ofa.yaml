@@ -1,0 +1,5 @@
+class_path: lib.model.classification.OFA
+init_args:
+  right_answer_loss:
+    class_path: torch.nn.CrossEntropyLoss
+  right_reason_loss: null
