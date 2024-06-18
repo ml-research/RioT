@@ -199,46 +199,6 @@ class P2SDataset(Dataset):
         return ExplainedItem(item[self.x_key], item["label"], feedback)
 
 
-class MechanicalClassificationDataset(Dataset):
-    """
-    This dataset resembles a wrapper around data which is in itself confounded. True explanations are provided via a lookup table
-    """
-
-    def __init__(
-        self,
-        cache_dir: Path,
-        scaler: Transform,
-        feedback_range: chain | None = None,
-        split: Literal["train", "test"] = "train",
-    ) -> None:
-        super().__init__()
-        is_train = split == "train"
-        self.path = cache_dir / "train.npz" if is_train else cache_dir / "test.npz"
-        self.transform = scaler
-
-        data = np.load(self.path)
-        self.xs = torch.from_numpy(data["x"])
-        self.ys = torch.from_numpy(data["y"])
-        self.speeds = torch.from_numpy(data["speed"])
-        self.expl_p = None
-
-        if is_train:  # we base our transform parameters on the train set
-            self.transform = self.transform.fit(self.xs)
-            if feedback_range is not None:
-                self.expl_p = torch.zeros_like(self.xs)
-                self.expl_p[:, list(feedback_range)] = 1
-
-    def __len__(self) -> int:
-        return len(self.xs)
-
-    def __getitem__(self, index: int) -> ExplainedItem:
-        x = self.transform(self.xs[index]).unsqueeze(-1)
-        feedback = None
-        if self.expl_p is not None:
-            feedback = FeedbackPenalty(freq=None, time=self.expl_p[index].unsqueeze(-1))
-        return ExplainedItem(x, self.ys[index], feedback)
-
-
 class ConfoundingDataset(UCRUEADataset):
     def __init__(
         self,

@@ -4,12 +4,6 @@ trainer:
 
 model: fcn.yaml
 
-# data:
-#   __base__: mechanical.yaml
-#   init_args:
-#     batch_size: 64
-#     lambda_time: 100
-
 optimizer:
   class_path: torch.optim.Adam
   # lr: 0.000524291743023029

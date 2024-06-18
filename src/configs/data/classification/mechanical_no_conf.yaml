@@ -1,5 +1,0 @@
-__base__: mechanical.yaml
-init_args:
-  train_experiment_idxs: [1, 19, 3, 21, 5, 23] # No conf.
-  test_experiment_idxs: [2, 20, 4, 22, 6, 24] # No conf.
-  

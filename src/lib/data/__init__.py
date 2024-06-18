@@ -5,7 +5,6 @@ from .forecasting_data import ForecastingData
 from .classification_data import ClassificationData
 from .data_enums import Confounder, ForecastingMode
 from .confounded_source import ConfoundedSourceData
-from .mechanical_classification_data import MechanicalClassificationData
 from .p2s_data import P2SData
 
 __all__ = [
@@ -17,6 +16,5 @@ __all__ = [
     "ClassificationData",
     "MinMaxScaler",
     "StandardScaler",
-    "MechanicalClassificationData",
     "P2SData"
 ]
