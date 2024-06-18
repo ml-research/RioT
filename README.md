@@ -2,6 +2,8 @@
 ![Hero](riot_hero_v2_git.png)
 Supplementary Code Repository for the Paper `Right on Time: Revising Time Series Models by Constraining their Explanations`
 
+[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2402.12921)
+
 ## Introduction
 Confounders are a challenging problem in machine learning in general, and have yet to receive proper attention in the context of time series. To rectify this, we present Right on Time (RioT), a general framework to mitigate confounders by utilizing human feedback. RioT constraints the model explanations in both spatial and frequency domains to prevent it from focusing on confounding features in the data, and train it to focus on the correct reasons instead.
 
