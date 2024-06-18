@@ -17,9 +17,9 @@ This repository contains the code used for our experiments presented in the pape
 - `src/configs`
     - Data, Model, and combined Experiment configurations
 - Our proposed RioT loss is represented in the code as follows:
-  - `RRRFIGLoss`, `HorizonRRRFIGLoss` -> `RioT<sub>freq</sub>`
-  - `RRRIGLoss`, `HorizonRRRIGLoss` -> `RioT<sub>sp</sub>`
-  - `RRRFTIGLoss`, `HorizonRRRFTIGLoss` -> `RioT<sub>freq,sp</sub>`
+  - RRRFIGLoss, HorizonRRRFIGLoss -> RioT<sub>freq</sub>
+  - RRRIGLoss, HorizonRRRIGLoss -> RioT<sub>sp</sub>
+  - RRRFTIGLoss, HorizonRRRFTIGLoss -> RioT<sub>freq,sp</sub>
 - `src/experiments`
     - Runner scripts for the configurations provided in `src/configs`
 - `.docker`
