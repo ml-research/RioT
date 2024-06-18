@@ -98,17 +98,17 @@ optimizer:
 
     *P2S Spatial Confounded*:
     ```bash
-        python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded"
+    python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded"
     ```
 
     *P2S Spatial Confounded + XIL (2)*:
     ```bash
-        python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf_2.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded + XIL (2)"
+    python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf_2.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded + XIL (2)"
     ```
 
     *P2S Spatial Confounded + XIL (4)*:
     ```bash
-        python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf_4.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded + XIL (4)"
+    python src/lib/cli/classification_cli.py fit+test -c src/configs/exp/classification/p2s_conf_4.yaml --seed_everything=34234 --experiment_name="P2S FCN" --run_name="P2S Spatial Confounded + XIL (4)"
     ```
 
 ## Citation
