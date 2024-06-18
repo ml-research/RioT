@@ -154,9 +154,7 @@ class P2SDataset(Dataset):
         super().__init__()
         self.transform = scaler
 
-        self.hg_dataset = load_dataset(
-            "json", data_files={split: self.make_url(split, mode.lower())}
-        )
+        self.hg_dataset = load_dataset("AIML-TUDA/P2S", mode, split=split)
         self.x_key = "dowel_deep_drawing_ow"
         self.feedback_mode = feedback_mode
 
@@ -187,18 +185,8 @@ class P2SDataset(Dataset):
         )
 
     @classmethod
-    def make_url(cls, kind: str, config: str):
-        return f"https://anonymous.4open.science/r/p2s/datasets/p2s-{config}/{kind}/dataset_info.json"
-
-    @classmethod
     def download_p2s(cls, mode: Literal["Decoy", "Normal"]):
-        _ = load_dataset(
-            "json",
-            data_files={
-                "train": cls.make_url("train", mode.lower()),
-                "test": cls.make_url("test", mode.lower()),
-            },
-        )
+        _ = load_dataset("AIML-TUDA/P2S", mode)
 
     def __len__(self) -> int:
         return self.hg_dataset.num_rows
